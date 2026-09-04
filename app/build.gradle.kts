@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.riyasolution.crm"
+    namespace = "com.riyasolution.riyasolutionapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.riyasolution.crm"
+        applicationId = "com.riyasolution.riyasolutionapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
