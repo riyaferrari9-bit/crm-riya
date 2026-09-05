@@ -1,34 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+
+    android:background="@color/background"
+
+    android:padding="16dp"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView android:id="@+id/ActivityPreDesignedQuotesBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategoryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDateHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmountHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuoteHistoryBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvTotalImporte" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ItemPartidaBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientNameHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvShareCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescriptionHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnSendPreDesigned" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ivCategoryIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityPreDesignedAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvQuantity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuickQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnResendQuote" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityCorporateInfoBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientPhoneHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityMainBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemSolutionBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    android:layout_height="match_parent">
+
+    <TextView
+
+        android:textSize="24sp"
+
+        android:textStyle="bold"
+
+        android:textColor="@color/primary"
+
+        android:gravity="center"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="16dp"
+
+        android:text="Historial de Cotizaciones"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="16dp"
+
+        app:startIconDrawable="@drawable/ic_search"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/etSearchQuery"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:hint="Buscar por nombre o telefono"
+
+            android:inputType="textPersonName"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerViewQuotes"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

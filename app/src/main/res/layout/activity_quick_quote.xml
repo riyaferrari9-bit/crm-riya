@@ -1,34 +1,599 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="#f5f7fa"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView android:id="@+id/ActivityPreDesignedQuotesBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategoryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDateHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmountHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuoteHistoryBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvTotalImporte" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ItemPartidaBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientNameHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvShareCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescriptionHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnSendPreDesigned" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ivCategoryIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityPreDesignedAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvQuantity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuickQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnResendQuote" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityCorporateInfoBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientPhoneHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityMainBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemSolutionBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>
+
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+
+        android:paddingBottom="140dp"
+
+        android:clipToPadding="false"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+
+            android:padding="16dp"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:textSize="28sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#242753"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp"
+
+                android:text="Nueva Propuesta"/>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp"
+
+                app:cardCornerRadius="16dp"
+
+                app:cardElevation="2dp"
+
+                app:strokeColor="#e0e0e0"
+
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+
+                    android:orientation="vertical"
+
+                    android:padding="16dp"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textSize="12sp"
+
+                        android:textStyle="bold"
+
+                        android:textColor="#242753"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="16dp"
+
+                        android:text="������ DATOS DEL CLIENTE"
+
+                        android:letterSpacing="0.1"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="12dp"
+
+                        android:hint="Nombre Completo *"
+
+                        app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+
+                        app:startIconTint="#242753"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/etClientNameQuote"
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+
+                            android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:hint="Tel��fono *"
+
+                            android:layout_weight="1"
+
+                            android:layout_marginEnd="8dp"
+
+                            app:startIconDrawable="@android:drawable/stat_sys_phone_call"
+
+                            app:startIconTint="#242753"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:id="@+id/etClientPhoneQuote"
+
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+
+                                android:inputType="phone"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:hint="Email"
+
+                            android:layout_weight="1.5"
+
+                            app:startIconDrawable="@android:drawable/ic_dialog_email"
+
+                            app:startIconTint="#242753"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:id="@+id/etClientEmail"
+
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+
+                                android:inputType="textEmailAddress"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="12dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:hint="Empresa"
+
+                            android:layout_weight="1"
+
+                            android:layout_marginEnd="8dp"
+
+                            app:startIconDrawable="@android:drawable/ic_menu_gallery"
+
+                            app:startIconTint="#242753"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:id="@+id/etClientCompany"
+
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+
+                                android:inputType="textCapWords"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:hint="Puesto"
+
+                            android:layout_weight="1"
+
+                            app:startIconTint="#242753"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:id="@+id/etClientPosition"
+
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+
+                                android:inputType="textCapWords"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+
+                android:textSize="11sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#555"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="8dp"
+
+                android:text="GASTOS OPERATIVOS"
+
+                android:letterSpacing="0.1"/>
+
+            <com.google.android.material.chip.ChipGroup
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp"
+
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/btnAddViaticos"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Vi��ticos"
+
+                    app:chipIcon="@android:drawable/ic_menu_mylocation"
+
+                    app:chipIconTint="#242753"
+
+                    style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/btnAddTraslado"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Traslado"
+
+                    app:chipIcon="@android:drawable/ic_menu_directions"
+
+                    app:chipIconTint="#242753"
+
+                    style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/btnAddDesgaste"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Desgaste"
+
+                    app:chipIcon="@android:drawable/ic_menu_manage"
+
+                    app:chipIconTint="#242753"
+
+                    style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout
+
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="12dp">
+
+                <TextView
+
+                    android:textSize="18sp"
+
+                    android:textStyle="bold"
+
+                    android:textColor="#242753"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="������ Partidas de la Propuesta"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recyclerViewPartidas"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="20dp"
+
+                android:nestedScrollingEnabled="false"/>
+
+            <com.google.android.material.button.MaterialButton
+
+                android:textStyle="bold"
+
+                android:textColor="#242753"
+
+                android:id="@+id/btnAddPartida"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="64dp"
+
+                android:text="AGREGAR CONCEPTO / PRODUCTO"
+
+                app:cornerRadius="12dp"
+
+                app:icon="@android:drawable/ic_input_add"
+
+                app:iconTint="#242753"
+
+                app:strokeColor="#242753"
+
+                app:strokeWidth="2dp"
+
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_gravity="bottom"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        app:cardBackgroundColor="#ffffff"
+
+        app:cardElevation="24dp"
+
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialComponents.Card.TopCorners"
+
+        app:strokeColor="#eee"
+
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+
+            android:padding="20dp"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+
+                    android:orientation="vertical"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1">
+
+                    <TextView
+
+                        android:textSize="11sp"
+
+                        android:textColor="#777"
+
+                        android:id="@+id/tvProjectValue"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="Proyecto: $0.00"/>
+
+                    <TextView
+
+                        android:textSize="11sp"
+
+                        android:textColor="#777"
+
+                        android:id="@+id/tvEngineeringFee"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="Ingenier��a: +$1,800.00"/>
+
+                    <TextView
+
+                        android:textSize="13sp"
+
+                        android:textStyle="bold"
+
+                        android:textColor="#444"
+
+                        android:id="@+id/tvSubtotal"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="4dp"
+
+                        android:text="Subtotal: $0.00"/>
+
+                    <TextView
+
+                        android:textSize="13sp"
+
+                        android:textStyle="bold"
+
+                        android:textColor="#b71c1c"
+
+                        android:id="@+id/tvIVA"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="IVA (16%): $0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:gravity="end"
+
+                    android:orientation="vertical"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textSize="10sp"
+
+                        android:textStyle="bold"
+
+                        android:textColor="#242753"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="TOTAL A INVERTIR"
+
+                        android:letterSpacing="0.1"/>
+
+                    <TextView
+
+                        android:textSize="26sp"
+
+                        android:textStyle="bold"
+
+                        android:textColor="#242753"
+
+                        android:id="@+id/tvGrandTotal"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="$0.00"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#fff"
+
+                android:id="@+id/btnSaveAndSendQuote"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="60dp"
+
+                android:text="FINALIZAR Y ENVIAR PROPUESTA ������"
+
+                android:elevation="4dp"
+
+                android:backgroundTint="#242753"
+
+                app:cornerRadius="16dp"
+
+                app:icon="@android:drawable/ic_menu_send"
+
+                app:iconGravity="textStart"
+
+                app:iconPadding="12dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,34 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/background"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView android:id="@+id/ActivityPreDesignedQuotesBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategoryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDateHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmountHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuoteHistoryBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvTotalImporte" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ItemPartidaBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientNameHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvShareCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescriptionHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnSendPreDesigned" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ivCategoryIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityPreDesignedAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvQuantity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuickQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnResendQuote" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityCorporateInfoBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientPhoneHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityMainBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemSolutionBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+
+        android:paddingTop="16dp"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+
+            android:textColor="@color/riya_blue_primary"
+
+            android:gravity="center"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="16dp"
+
+            android:text="BIBLIOTECA DE SOLUCIONES"
+
+            android:letterSpacing="0.1"/>
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+
+            android:layout_marginRight="16dp"
+
+            android:layout_marginBottom="16dp"
+
+            app:cardCornerRadius="8dp"
+
+            app:cardElevation="2dp">
+
+            <androidx.appcompat.widget.SearchView
+
+                android:id="@+id/searchViewSolutions"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                app:iconifiedByDefault="false"
+
+                app:queryBackground="@android:color/transparent"
+
+                app:queryHint="Buscar soluci��n experta..."/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <HorizontalScrollView
+
+            android:paddingLeft="16dp"
+
+            android:paddingRight="16dp"
+
+            android:scrollbars="none"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.chip.ChipGroup
+
+                android:id="@+id/chipGroupCategories"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                app:selectionRequired="true"
+
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipAll"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:checked="true"
+
+                    android:text="Todas"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipCCTV"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="CCTV"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipRedes"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Redes"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipTI"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="TI"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipEnergia"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Energ��a"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipAudio"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Audio Profesional"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/chipSeguridad"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Seguridad Avanzada"
+
+                    style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerViewPreDesigned"
+
+            android:paddingLeft="4dp"
+
+            android:paddingRight="4dp"
+
+            android:clipToPadding="false"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:layout_gravity="end|bottom"
+
+        android:id="@+id/fabAddSolution"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_margin="24dp"
+
+        android:src="@android:drawable/ic_input_add"
+
+        android:contentDescription="A��adir nueva soluci��n"
+
+        android:backgroundTint="@color/riya_blue_primary"
+
+        app:tint="@color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

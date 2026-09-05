@@ -1,34 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView android:id="@+id/ActivityPreDesignedQuotesBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategoryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDateHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmountHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuoteHistoryBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvTotalImporte" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ItemPartidaBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientNameHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvShareCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescriptionHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnSendPreDesigned" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ivCategoryIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityPreDesignedAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvQuantity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuickQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnResendQuote" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityCorporateInfoBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientPhoneHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityMainBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemSolutionBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>
+
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="8dp"
+
+    app:cardCornerRadius="8dp"
+
+    app:cardElevation="2dp"
+
+    app:contentPadding="12dp">
+
+    <LinearLayout
+
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1">
+
+            <TextView
+
+                android:textSize="14sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#000"
+
+                android:id="@+id/tvDescription"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="Descripci��n del producto"/>
+
+            <TextView
+
+                android:textSize="12sp"
+
+                android:textColor="#666"
+
+                android:id="@+id/tvCategory"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="2dp"
+
+                android:text="Categor��a"/>
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp">
+
+                <TextView
+
+                    android:textStyle="bold"
+
+                    android:textColor="#242753"
+
+                    android:id="@+id/tvAmount"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="$0.00"/>
+
+                <TextView
+
+                    android:textColor="#666"
+
+                    android:id="@+id/tvQuantity"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="x1"
+
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:gravity="end"
+
+            android:orientation="vertical"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:textSize="17sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#242753"
+
+                android:id="@+id/tvTotalImporte"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="$0.00"/>
+
+            <ImageButton
+
+                android:id="@+id/btnDelete"
+
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                android:padding="6dp"
+
+                android:layout_width="36dp"
+
+                android:layout_height="36dp"
+
+                android:layout_marginTop="8dp"
+
+                android:src="@android:drawable/ic_menu_delete"
+
+                app:tint="#b71c1c"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,34 +1,377 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/background"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView android:id="@+id/ActivityPreDesignedQuotesBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategoryLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDateHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmountHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuoteHistoryBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvTotalImporte" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ItemPartidaBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientNameHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvShareCount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvDescriptionHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvSolutionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnSendPreDesigned" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ivCategoryIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityPreDesignedAdminBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvQuantity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityQuickQuoteBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/btnResendQuote" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityCorporateInfoBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvClientPhoneHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ActivityMainBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/ListItemSolutionBinding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+
+        android:padding="20dp"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_gravity="center"
+
+            android:layout_width="100dp"
+
+            android:layout_height="100dp"
+
+            android:layout_marginBottom="16dp"
+
+            android:src="@drawable/riya_logo"/>
+
+        <TextView
+
+            android:textSize="22sp"
+
+            android:textStyle="bold"
+
+            android:textColor="@color/riya_blue_primary"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="12dp"
+
+            android:text="Nuestra Esencia"/>
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="24dp"
+
+            app:cardCornerRadius="12dp"
+
+            app:cardElevation="4dp">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+
+                android:padding="16dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:textSize="18sp"
+
+                    android:textStyle="bold"
+
+                    android:textColor="@color/riya_blue_primary"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="8dp"
+
+                    android:text="Misi��n"/>
+
+                <TextView
+
+                    android:textSize="15sp"
+
+                    android:textColor="#444444"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Ser el aliado clave en innovaci��n tecnol��gica, transformando la infraestructura de nuestros clientes en sistemas inteligentes, seguros y altamente rentables."
+
+                    android:lineSpacingExtra="4dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+
+            android:textSize="22sp"
+
+            android:textStyle="bold"
+
+            android:textColor="@color/riya_blue_primary"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="12dp"
+
+            android:text="Servicios Especializados"/>
+
+        <GridLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:columnCount="2"
+
+            android:columnOrderPreserved="false"
+
+            android:alignmentMode="alignMargins">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:layout_columnWeight="1"
+
+                app:cardCornerRadius="12dp"
+
+                app:cardElevation="2dp">
+
+                <LinearLayout
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="16dp"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+
+                        android:src="@android:drawable/ic_menu_preferences"
+
+                        app:tint="@color/riya_blue_primary"/>
+
+                    <TextView
+
+                        android:textStyle="bold"
+
+                        android:textColor="@color/riya_blue_primary"
+
+                        android:gravity="center"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Infraestructura IT"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:layout_columnWeight="1"
+
+                app:cardCornerRadius="12dp"
+
+                app:cardElevation="2dp">
+
+                <LinearLayout
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="16dp"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+
+                        android:src="@android:drawable/ic_lock_lock"
+
+                        app:tint="@color/riya_blue_primary"/>
+
+                    <TextView
+
+                        android:textStyle="bold"
+
+                        android:textColor="@color/riya_blue_primary"
+
+                        android:gravity="center"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Seguridad Avanzada"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:layout_columnWeight="1"
+
+                app:cardCornerRadius="12dp"
+
+                app:cardElevation="2dp">
+
+                <LinearLayout
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="16dp"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+
+                        android:src="@android:drawable/ic_menu_share"
+
+                        app:tint="@color/riya_blue_primary"/>
+
+                    <TextView
+
+                        android:textStyle="bold"
+
+                        android:textColor="@color/riya_blue_primary"
+
+                        android:gravity="center"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Conectividad y Redes"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:layout_columnWeight="1"
+
+                app:cardCornerRadius="12dp"
+
+                app:cardElevation="2dp">
+
+                <LinearLayout
+
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+
+                    android:padding="16dp"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+
+                        android:src="@android:drawable/ic_menu_day"
+
+                        app:tint="@color/riya_blue_primary"/>
+
+                    <TextView
+
+                        android:textStyle="bold"
+
+                        android:textColor="@color/riya_blue_primary"
+
+                        android:gravity="center"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Energ��a y Automatizaci��n"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+        <Button
+
+            android:textColor="@color/white"
+
+            android:id="@+id/btnBack"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            android:text="VOLVER AL DASHBOARD"
+
+            android:backgroundTint="@color/riya_blue_primary"/>
+
+    </LinearLayout>
+
+</ScrollView>
